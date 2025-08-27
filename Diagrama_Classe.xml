@@ -1,0 +1,43 @@
+<mxGraphModel dx="1434" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="4-DBx3PZ1uI_U2GzLgGf-1" value="&lt;b&gt;Paciente&lt;/b&gt;&lt;hr&gt;- id: int (PK)&lt;br&gt;- nome: str&lt;br&gt;- cpf: str&lt;br&gt;- data_nascimento: date&lt;hr&gt;+ cadastrar()&lt;br&gt;+ atualizar()&lt;br&gt;+ excluir()&lt;br&gt;+ buscar_por_id()" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="80" y="270" width="200" height="176" as="geometry" />
+    </mxCell>
+    <mxCell id="4-DBx3PZ1uI_U2GzLgGf-2" value="&lt;b&gt;Medico&lt;/b&gt;&lt;hr&gt;- id: int (PK)&lt;br&gt;- nome: str&lt;br&gt;- especialidade: str&lt;br&gt;- crm: str&lt;hr&gt;+ cadastrar()&lt;br&gt;+ atualizar()&lt;br&gt;+ excluir()&lt;br&gt;+ buscar_por_id()" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="540" y="270" width="200" height="176" as="geometry" />
+    </mxCell>
+    <mxCell id="4-DBx3PZ1uI_U2GzLgGf-3" value="&lt;b&gt;Consulta&lt;/b&gt;&lt;hr&gt;- id: int (PK)&lt;br&gt;- id_paciente: int (FK)&lt;br&gt;- id_medico: int (FK)&lt;br&gt;- data_hora: datetime&lt;br&gt;- status: str&lt;hr&gt;+ agendar()&lt;br&gt;+ cancelar()&lt;br&gt;+ reagendar()" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="310" y="80" width="200" height="166" as="geometry" />
+    </mxCell>
+    <mxCell id="4-DBx3PZ1uI_U2GzLgGf-7" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4-DBx3PZ1uI_U2GzLgGf-1" target="4-DBx3PZ1uI_U2GzLgGf-3">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="200" y="260" as="sourcePoint" />
+        <mxPoint x="380" y="256" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="4-DBx3PZ1uI_U2GzLgGf-8" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" connectable="0" parent="4-DBx3PZ1uI_U2GzLgGf-7">
+      <mxGeometry x="-0.72" y="1" relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="4-DBx3PZ1uI_U2GzLgGf-9" value="0..*" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" connectable="0" parent="4-DBx3PZ1uI_U2GzLgGf-7">
+      <mxGeometry x="0.74" relative="1" as="geometry">
+        <mxPoint y="-8" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="4-DBx3PZ1uI_U2GzLgGf-11" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4-DBx3PZ1uI_U2GzLgGf-2" target="4-DBx3PZ1uI_U2GzLgGf-3">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="630" y="260" as="sourcePoint" />
+        <mxPoint x="470" y="256" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="4-DBx3PZ1uI_U2GzLgGf-12" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" connectable="0" parent="4-DBx3PZ1uI_U2GzLgGf-11">
+      <mxGeometry x="-0.8014" relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="4-DBx3PZ1uI_U2GzLgGf-13" value="0..*" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" connectable="0" parent="4-DBx3PZ1uI_U2GzLgGf-11">
+      <mxGeometry x="0.8057" relative="1" as="geometry">
+        <mxPoint y="-8" as="offset" />
+      </mxGeometry>
+    </mxCell>
+  </root>
+</mxGraphModel>
